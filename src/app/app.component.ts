@@ -21,7 +21,6 @@ LOAD_WASM().subscribe();
 })
 export class AppComponent {
   title = 'QR-Generator-Reader';
-
   scanQRCodeSuccess(data: string) {
     console.log('QRCode data', data);
   }

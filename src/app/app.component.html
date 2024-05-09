@@ -1,7 +1,12 @@
 <app-pokemon-list>
 </app-pokemon-list>
 <!-- For camera -->
-<ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
+<ngx-scanner-qrcode 
+#action="scanner"
+(onScanSuccess)="scanQRCodeSuccess($event)"
+[device]="'environment'"
+>
+</ngx-scanner-qrcode>
 
 <!-- data  -->
 <span>{{ action.data.value | json }}</span><!-- value -->
