@@ -13,5 +13,5 @@ import { MaterialModuleModule } from './material-module/material-module.module';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'qrapp';
+  title = 'QR-Generator-Reader';
 }

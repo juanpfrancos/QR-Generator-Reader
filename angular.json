@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "qrapp": {
+    "QR-Generator-Reader": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,9 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/qrapp/",
-            "deployUrl": "/qrapp/",
-            "outputPath": "dist/qrapp",
+            "baseHref": "/QR-Generator-Reader/",
+            "deployUrl": "/QR-Generator-Reader/",
+            "outputPath": "dist/QR-Generator-Reader",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "qrapp:build:production"
+              "buildTarget": "QR-Generator-Reader:build:production"
             },
             "development": {
-              "buildTarget": "qrapp:build:development"
+              "buildTarget": "QR-Generator-Reader:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "qrapp:build"
+            "buildTarget": "QR-Generator-Reader:build"
           }
         },
         "test": {
