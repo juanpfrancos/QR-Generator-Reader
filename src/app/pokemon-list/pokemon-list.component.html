@@ -1,0 +1,10 @@
+<div *ngIf="isLoading" class="spinner-container">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+  
+  <div *ngIf="!isLoading" class="pokemon-card-container">
+    <mat-card>
+      <mat-card-title>{{ pokemon.name }}</mat-card-title>
+      <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
+    </mat-card>
+</div>

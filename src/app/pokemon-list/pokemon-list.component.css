@@ -1,0 +1,5 @@
+.spinner-container { display: flex; justify-content: center; align-items: center; height: 100%; }
+
+.pokemon-card-container { display: flex; justify-content: center; align-items: center; height: 100%; }
+
+.pokemon-card-container mat-card { width: 300px; }
