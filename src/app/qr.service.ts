@@ -15,6 +15,7 @@ export class PokemonService {
     return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`).pipe(
       map(data => ({
         name: data.name,
+        weight: data.weight,
         sprites: {
           front_default: data.sprites.front_default
         }
