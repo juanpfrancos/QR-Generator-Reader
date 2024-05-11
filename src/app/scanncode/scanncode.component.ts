@@ -13,23 +13,24 @@ export class ScanncodeComponent {
   scanner!: ZXingScannerComponent;
 
   scannerEnabled: boolean = false;
-  desiredDevice: any; // This will hold the selected device for scanning
+  desiredDevice: any; 
 
   toggleScanner(): void {
     this.scannerEnabled = !this.scannerEnabled;
   }
 
   onCamerasFound(devices: MediaDeviceInfo[]): void {
-    // If there are multiple cameras, set the desiredDevice to the back camera
     const backCamera = devices.find(device => device.label.toLowerCase().includes('back'));
     if (backCamera) {
       this.desiredDevice = backCamera;
     } else {
-      this.desiredDevice = devices[0]; // If no back camera, use the first one found
+      this.desiredDevice = devices[0];
     }
   }
 
   scanSuccessHandler(result: string): void {
     console.log('QR Code scanned:', result);
+    alert(result);
+    this.scannerEnabled = !this.scannerEnabled;
   }
 }
