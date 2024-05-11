@@ -1,1 +1,8 @@
-<zxing-scanner></zxing-scanner>
+<button (click)="toggleScanner()">Toggle Scanner</button>
+<zxing-scanner
+  #scanner
+  [enable]="scannerEnabled"
+  [(device)]="desiredDevice"
+  (camerasFound)="onCamerasFound($event)"
+  (scanSuccess)="scanSuccessHandler($event)"
+></zxing-scanner>
