@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule} from '@angular/common';
-import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    NgxScannerQrcodeModule,
+    ZXingScannerModule
   ],
   exports: [
     CommonModule,
-    NgxScannerQrcodeModule
+    ZXingScannerModule
   ]
 })
 export class ScannModuleModule { }
