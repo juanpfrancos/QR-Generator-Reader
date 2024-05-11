@@ -1,5 +1,6 @@
 <button (click)="toggleScanner()">Toggle Scanner</button>
 <zxing-scanner
+*ngIf="scannerEnabled"
   #scanner
   [enable]="scannerEnabled"
   [(device)]="desiredDevice"
