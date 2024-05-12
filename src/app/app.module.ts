@@ -12,8 +12,9 @@ import { routes } from './app.routes';
   imports: [
     BrowserModule,
     SharedModule,
-    RouterModule.forRoot(routes) // Se añade RouterModule.forRoot con las rutas
+    RouterModule.forRoot(routes, { useHash: true })
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
