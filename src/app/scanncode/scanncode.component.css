@@ -1,0 +1,47 @@
+.container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scanner-area {
+  width: 500px;
+}
+
+.center-text {
+  text-align: center;
+  width: 100px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.qr-button {
+  padding: 0.2em 1em;
+  height: 2em;
+  width: 100%;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-fade {
+  animation: fadeInOut 0.3s ease-in-out both;
+}

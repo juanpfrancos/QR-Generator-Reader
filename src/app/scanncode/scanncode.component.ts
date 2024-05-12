@@ -1,12 +1,15 @@
 import { ScannModuleModule } from '../scann-module/scann-module.module'; 
 import { Component, ViewChild } from '@angular/core';
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-scanncode',
   standalone: true,
-  imports: [ScannModuleModule],
-  templateUrl: './scanncode.component.html',
+  imports: [ScannModuleModule, MatCardModule, MatButtonModule],
+  styleUrls: ['./scanncode.component.css'],
+  templateUrl: './scanncode.component.html'
 })
 export class ScanncodeComponent {
   @ViewChild('scanner', { static: false })

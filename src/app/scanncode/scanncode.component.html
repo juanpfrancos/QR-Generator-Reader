@@ -1,9 +1,21 @@
-<button (click)="toggleScanner()">Toggle Scanner</button>
-<zxing-scanner
-*ngIf="scannerEnabled"
-  #scanner
-  [enable]="scannerEnabled"
-  [(device)]="desiredDevice"
-  (camerasFound)="onCamerasFound($event)"
-  (scanSuccess)="scanSuccessHandler($event)"
-></zxing-scanner>
+<div class="container-center">
+  <mat-card>
+    <mat-card-content class="card-content">
+      <div class="center-text">
+        <button mat-raised-button color="primary" (click)="toggleScanner()" class="qr-button">
+          Scann QR
+        </button>
+      </div>
+      <div class="scanner-area">
+        <zxing-scanner
+          *ngIf="scannerEnabled"
+          #scanner
+          [enable]="scannerEnabled"
+          [(device)]="desiredDevice"
+          (camerasFound)="onCamerasFound($event)"
+          (scanSuccess)="scanSuccessHandler($event)"
+        ></zxing-scanner>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
