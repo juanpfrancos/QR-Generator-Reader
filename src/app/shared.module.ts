@@ -1,8 +1,6 @@
-
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
     imports: [
@@ -10,11 +8,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
         CommonModule
     ],
     exports: [
-        HttpClientModule
+        HttpClientModule,
+        CommonModule
     ],
     providers: [
-        // ...otros proveedores...
         {provide: LocationStrategy, useClass: HashLocationStrategy}
-      ]
+    ]
 })
 export class SharedModule { }
