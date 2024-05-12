@@ -1,0 +1,36 @@
+.qr-generator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.qr-generator-form{
+  width: 300px;
+}
+.qr-generator-result{
+  width: 500px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-out {
+  animation: fadeInOut 0.3s ease-in-out both;
+}

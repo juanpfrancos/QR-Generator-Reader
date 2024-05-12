@@ -1,4 +1,37 @@
-<div *ngIf="qrCodeBase64">
-    <img [src]="'data:image/png;base64,' + qrCodeBase64" alt="QR Code">
+<div class="qr-generator-container">
+  <div class="qr-generator-form" *ngIf="!submit">
+    <mat-card>
+      <div class="text-center">
+        <mat-card-title class="text-center">Generar Código QR</mat-card-title>
+      </div>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field appearance="outline" class="full-width-input">
+            <mat-label>Nombre de usuario</mat-label>
+            <input matInput formControlName="username" type="text" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width-input">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" type="password" required>
+          </mat-form-field>
+
+          <div class="text-center">
+            <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+              Generar
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="qr-generator-result" *ngIf="submit && qrCodeBase64">
+    <mat-card>
+      <mat-card-title class="text-center">Código QR Generado</mat-card-title>
+      <mat-card-content class="text-center">
+        <img [src]="'data:image/png;base64,' + qrCodeBase64" alt="QR Code" *ngIf="qrCodeBase64" />
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
-  
