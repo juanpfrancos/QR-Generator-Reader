@@ -1,1 +1,4 @@
-<p>generateqr works!</p>
+<div *ngIf="qrCodeBase64">
+    <img [src]="'data:image/png;base64,' + qrCodeBase64" alt="QR Code">
+</div>
+  
